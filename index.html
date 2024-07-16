@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script> -->
   <title>Portofolio Tailwind</title>
 </head>
 <body>
@@ -19,8 +20,8 @@
             <li class="px-7 py-1 hover:text-gray-800"><a href="" class="md:border-4 md:border-orange-200 md:py-2 md:px-5 rounded-lg md:hover:bg-orange-200 md:hover:text-black hover:bg-gray-300 ">Getting Started</a></li> 
         </ul>
         <button class="hamburger-menu text-2xl md:hidden">
-            <i class="fa-solid fa-bars"></i>
-            <i class="fa-solid fa-xmark hidden"></i>
+            <i id="bars" class="fa-solid fa-bars"></i>
+            <i id="close" class="fa-solid fa-xmark hidden"></i>
         </button>
     </nav>
   </header>
@@ -30,13 +31,13 @@
         <div class="container px-3 mx-auto flex flex-wrap flex-col md:h-screen md:flex-row items-center">
             <!--Left Col-->
             <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-                <h1 class="my-4 text-5xl font-bold leading-tight">Hi, I'am Sigit Sugiantoro</h1>
+                <h1 class="my-4 text-5xl font-bold leading-tight">Hi, I'm Sigit Sugiantoro</h1>
                 <p class="font-bold w-full text-3xl mb-2">Programmer</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium laboriosam ullam aliquam unde, magni aperiam!</p>
                 <a href="#portofolio" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">See All Portofolio</a>
             </div>
 
-            <div class="w-full md:w-3/5 py-6 text-center">
+            <div id="imageHeader" class="w-full md:w-3/5 py-6 text-center">
                 <img class="w-full md:w-4/5 md:ml-52" src="./image/8815173-removebg-preview.png" />
               </div>
 
@@ -48,18 +49,18 @@
       <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-black underline">
         About Me
       </h1>
-      <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row  items-center">
+      <div class="container px-3 mx-auto flex flex-wrap flex-col-reverse md:flex-row  items-center">
         <!--Left Col-->
-        <div class="w-full md:w-3/5 py-6 text-center">
+        <div id="imgLeft" class="w-full md:w-3/5 py-6 text-center">
             <img class="w-full md:w-4/5 z-50" src="./image/istockphoto-1248575475-612x612-removebg-preview.png" />
           </div>
         <!--Rigth Col-->
           <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-            <h5 class="my-4 text-5xl font-bold leading-tight w-full">Pendidikan</h5>
+            <h5 class="my-4 text-3xl md:text-5xl font-bold leading-tight w-full">Pendidikan</h5>
             <p class="text-xl w-full"><i class="fa-solid fa-minus"></i> 2016 - 2020</p>
             <p class="mb-5 text-xl"><i class="fa-solid fa-school"></i>  S1 Teknik Informatika Universitas Wijaya Kusuma Surabaya</p>
             
-            <h5 class="my-4 text-5xl font-bold leading-tight w-full">Pengalaman Kerja</h5>
+            <h5 class="my-4 text-3xl md:text-5xl font-bold leading-tight w-full">Pengalaman Kerja</h5>
             <p class="text-xl w-full"><i class="fa-solid fa-minus"></i> November 2022 - Sekarang</p>
             <p class="text-xl w-full"><i class="fa-solid fa-circle"></i> Toko Sparepart</p>
             <p class="mb-5 text-xl w-full"><i class="fa-solid fa-arrow-right"></i> Administrasi</p>
@@ -68,7 +69,7 @@
             <p class="text-xl w-full"><i class="fa-solid fa-circle"></i> PT Sinergi Informatika Semen Indonesia, Gresik</p>
             <p class="mb-5 text-xl w-full"><i class="fa-solid fa-arrow-right"></i> Junior Programmer</p>
 
-            <h5 class="my-4 text-5xl font-bold leading-tight w-full">Skill</h5>
+            <h5 class="my-4 text-3xl md:text-5xl font-bold leading-tight w-full">Skill</h5>
             <div class="flex flex-row space-x-3 w-full justify-between md:justify-start">
                 <i class="fa-brands fa-html5 text-5xl"></i></i>
                 <i class="fa-brands fa-css3-alt text-5xl"></i>
@@ -79,7 +80,7 @@
                 <img src="./image/c93561ce889c03839424e455d98579c3-removebg-preview.png" alt="" class="w-12">
             </div>
           
-            <h5 class="my-4 text-5xl font-bold leading-tight w-full">Link</h5>
+            <h5 class="my-4 text-3xl md:text-5xl font-bold leading-tight w-full">Link</h5>
             <a href="https://github.com/Sigitttsss" class="text-xl w-full"><i class="fa-solid fa-link"></i> https://github.com/Sigitttsss</a>
         </div>
     </div>
@@ -89,7 +90,7 @@
     <!--Portofolio-->
     <section id="portofolio" class="w-full bg-gray-100 pb-40">
       <div class="py-20">
-      <h3 class="text-5xl font-bold text-center pb-10">Portofolio</h3>
+      <h3 class="text-5xl font-bold text-center pb-10 underline">Portofolio</h3>
       <p class="text-black mb-5 text-center text-xl w-full">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, cupiditate.</p>
     </div>
       <div class="grid grid-cols-2 pb-40 md:grid-cols-4 w-11/12 md:container mx-auto gap-6">
@@ -113,7 +114,7 @@
           </div>
           <!--Portofolio 3-->
           <div class="shadow-xl bg-white">
-              <a href="">
+              <a href="https://github.com/Sigitttsss/portofolio_TailwindCSS">
                   <img src="./image/Screenshot 2024-07-15 222026.png" alt="" class="w-full md:h-52">
                   <div class="py-3 px-5">
                       <h4 class="text-center font-bold">My Portofolio Tailwind CSS</h4>
@@ -135,7 +136,7 @@
  <!--Services-->
  <section id="services" class="bg-orange-200 py-32">
   <div class="w-11/12 md:container mx-auto">
-      <h3 class="text-5xl font-bold text-center mb-10">Our Services</h3>
+      <h3 class="text-5xl font-bold text-center mb-10 underline">Our Services</h3>
       <p class="text-black text-center mb-20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam velit neque consequatur!</p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <!--Services 1-->
@@ -182,8 +183,6 @@
  <footer class="py-5 text-center font-bold">
   &copy; 2024 Portofolio Simple
  </footer>
-
-
 
 
   <script src="script.js"></script>
